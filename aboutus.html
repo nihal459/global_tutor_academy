@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Global Tutor Academy</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .about-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .testimonial {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+        .ad-banner {
+            background: url('ad-banner.jpg') no-repeat center center;
+            background-size: cover;
+            height: 200px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .video-iframe {
+            width: 100%;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Global Tutor Academy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="student.html">Student</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tutor.html">Tutor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- About Us Content -->
+<section class="container my-5">
+    <!-- Row 1: Image and About Us Content -->
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+            <img src="about-us.jpg" alt="About Us" class="about-image">
+        </div>
+        <div class="col-md-6">
+            <h2>About Global Tutor Academy</h2>
+            <p>Global Tutor Academy is a premier online education platform providing high-quality tuition classes to students from Class 1 to 12. Our goal is to deliver personalized learning experiences that cater to the individual needs of each student. With a team of experienced tutors, we focus on fostering academic excellence and building a strong foundation for lifelong learning.</p>
+            <p>Our innovative approach combines traditional teaching methods with modern technology, ensuring that students receive the best possible education in a supportive and engaging environment.</p>
+        </div>
+    </div>
+
+    <!-- Row 2: YouTube Videos -->
+    <div class="row mb-5">
+        <div class="col-md-6">
+            <div class="ratio ratio-16x9">
+                <iframe class="video-iframe" src="https://www.youtube.com/embed/VIDEO_ID1" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ratio ratio-16x9">
+                <iframe class="video-iframe" src="https://www.youtube.com/embed/VIDEO_ID2" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Row 3: Testimonials -->
+    <div class="row mb-5">
+        <div class="col text-center">
+            <h2>What Our Students Say</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="testimonial">
+                <p>"Global Tutor Academy has transformed my approach to learning. The tutors are excellent and very helpful."</p>
+                <p><strong>- Student A</strong></p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="testimonial">
+                <p>"The online classes are interactive and engaging, making learning fun and effective."</p>
+                <p><strong>- Student B</strong></p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="testimonial">
+                <p>"I have seen a significant improvement in my grades since joining Global Tutor Academy."</p>
+                <p><strong>- Student C</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Row 4: Book Your Classes Button and Advertisement Banner -->
+    <div class="row my-5">
+        <div class="col-md-8">
+            <div class="ad-banner">
+                <h3>Join our courses today and excel in your studies!</h3>
+            </div>
+        </div>
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+            <a href="join_class1.html" class="btn btn-primary btn-lg">Book Your Classes</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <p>&copy; 2024 Global Tutor Academy. All rights reserved.</p>
+        <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Privacy Policy</a></li>
+            <li><a href="#" class="text-white">Terms & Conditions</a></li>
+        </ul>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

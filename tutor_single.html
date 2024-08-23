@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor Details - Global Tutor Academy</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .tutor-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .tutor-card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .tutor-card:hover {
+            transform: translateY(-10px);
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin-bottom: 20px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Global Tutor Academy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="student.html">Student</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tutor.html">Tutor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Tutor Details Section -->
+<section class="container my-5">
+    <div class="row">
+        <!-- Tutor Image -->
+        <div class="col-md-6">
+            <img src="tutor1.jpg" class="tutor-image" alt="Tutor Image"> <!-- Replace with actual tutor image -->
+        </div>
+        <!-- Tutor Details -->
+        <div class="col-md-6">
+            <h2>John Doe</h2>
+            <p><strong>Specialization:</strong> Mathematics</p>
+            <p><strong>Bio:</strong> John Doe is a seasoned mathematics tutor with over 10 years of experience in teaching high school and college-level mathematics. He has a passion for helping students understand complex mathematical concepts with ease and clarity.</p>
+            <p><strong>Preferred Class Timings:</strong> Monday to Friday, 10 AM - 12 PM, 3 PM - 5 PM</p>
+            <p><strong>Specializations:</strong> Algebra, Calculus, Geometry, Trigonometry</p>
+            <p><strong>Experience:</strong> John has successfully guided over 500 students to excel in their exams with his unique teaching methods.</p>
+            <a href="join_class2.html" class="btn btn-primary">Join Class</a>
+        </div>
+    </div>
+</section>
+
+<!-- Sample Class Section -->
+<section class="container my-5">
+    <h3 class="mb-4">Sample Class</h3>
+    <div class="row">
+        <!-- Video 1 -->
+        <div class="col-md-6">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe> <!-- Replace VIDEO_ID_1 with actual YouTube video ID -->
+            </div>
+        </div>
+        <!-- Video 2 -->
+        <div class="col-md-6">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe> <!-- Replace VIDEO_ID_2 with actual YouTube video ID -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <p>&copy; 2024 Global Tutor Academy. All rights reserved.</p>
+        <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Privacy Policy</a></li>
+            <li><a href="#" class="text-white">Terms & Conditions</a></li>
+        </ul>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

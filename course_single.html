@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details - Global Tutor Academy</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .course-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .tutor-card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .tutor-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .carousel-item {
+            padding: 15px;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+
+
+        .custom-carousel-control {
+        z-index: 1;
+        top: 50%;
+        width: 5%;
+        transform: translateY(-50%);
+        }
+        .carousel-control-prev.custom-carousel-control {
+            left: -2%; /* Adjust this value to move the button further to the left */
+        }
+        .carousel-control-next.custom-carousel-control {
+            right: -2%; /* Adjust this value to move the button further to the right */
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Global Tutor Academy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="student.html">Student</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tutor.html">Tutor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Course Details Section -->
+<section class="container my-5">
+    <div class="row">
+        <!-- Course Image -->
+        <div class="col-md-6">
+            <img src="course1.jpg" class="course-image" alt="Course Image"> <!-- Replace with actual course image -->
+        </div>
+        <!-- Course Details -->
+        <div class="col-md-6">
+            <h2>Mathematics for Class 10</h2>
+            <p><strong>Duration:</strong> 6 months</p>
+            <p><strong>Description:</strong> This course covers all essential topics in Mathematics for Class 10, including Algebra, Geometry, Trigonometry, and Calculus. It is designed to strengthen your foundation in Mathematics and prepare you for higher studies.</p>
+            <p><strong>Start Date:</strong> September 1, 2024</p>
+            <p><strong>Course Fees:</strong> $500</p>
+            <a href="join_class1.html" class="btn btn-primary">Join Class</a>
+
+            <!-- Add any other course details needed -->
+        </div>
+    </div>
+</section>
+
+<!-- YouTube Videos Section -->
+<section class="container my-5">
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/sample_video_1" title="YouTube video" allowfullscreen></iframe> <!-- Replace with actual video link -->
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/sample_video_2" title="YouTube video" allowfullscreen></iframe> <!-- Replace with actual video link -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tutors Section -->
+<!-- Tutor Section with Carousel -->
+<section class="container my-5">
+    <h3 class="mb-4">Tutors Teaching This Course</h3>
+    <div id="tutorCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card tutor-card">
+                            <img src="tutor1.jpg" class="card-img-top" alt="Tutor 1">
+                            <div class="card-body">
+                                <h5 class="card-title">John Doe</h5>
+                                <p class="card-text">Mathematics expert with 10 years of teaching experience.</p>
+                                <a href="tutor_single.html" class="btn btn-primary">View More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card tutor-card">
+                            <img src="tutor1.jpg" class="card-img-top" alt="Tutor 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Jane Smith</h5>
+                                <p class="card-text">Specializes in Algebra and Calculus with 7 years of experience.</p>
+                                <a href="tutor_single.html" class="btn btn-primary">View More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card tutor-card">
+                            <img src="tutor1.jpg" class="card-img-top" alt="Tutor 3">
+                            <div class="card-body">
+                                <h5 class="card-title">David Lee</h5>
+                                <p class="card-text">Expert in Geometry and Trigonometry with 5 years of experience.</p>
+                                <a href="tutor_single.html" class="btn btn-primary">View More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card tutor-card">
+                            <img src="tutor1.jpg" class="card-img-top" alt="Tutor 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Emily Johnson</h5>
+                                <p class="card-text">Physics and Mathematics tutor with a focus on problem-solving techniques.</p>
+                                <a href="tutor_single.html" class="btn btn-primary">View More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card tutor-card">
+                            <img src="tutor1.jpg" class="card-img-top" alt="Tutor 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Michael Brown</h5>
+                                <p class="card-text">Calculus and Advanced Mathematics specialist with 8 years of experience.</p>
+                                <a href="tutor_single.html" class="btn btn-primary">View More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card tutor-card">
+                            <img src="tutor1.jpg" class="card-img-top" alt="Tutor 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Michael Brown</h5>
+                                <p class="card-text">Calculus and Advanced Mathematics specialist with 8 years of experience.</p>
+                                <a href="tutor_single.html" class="btn btn-primary">View More</a>
+                            </div>
+                        </div>
+                    </div>
+                 
+                </div>
+            </div>
+        </div>
+        <!-- Carousel controls -->
+        <button class="carousel-control-prev custom-carousel-control" type="button" data-bs-target="#tutorCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="" style="color:black; font-size: 20px;"><<span style="color:white;">............</span></span>
+        </button>
+        <button class="carousel-control-next custom-carousel-control" type="button" data-bs-target="#tutorCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="" style="color:black; font-size: 20px;">></span>
+        </button>
+    </div>
+</section>
+
+
+
+
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <p>&copy; 2024 Global Tutor Academy. All rights reserved.</p>
+        <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Privacy Policy</a></li>
+            <li><a href="#" class="text-white">Terms & Conditions</a></li>
+        </ul>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Tutor Academy</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .banner {
+            background: url('banner-image.jpg') no-repeat center center;
+            background-size: cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .course-card {
+            border: none;
+            transition: transform 0.3s;
+        }
+        .course-card:hover {
+            transform: scale(1.05);
+        }
+        .testimonial {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Global Tutor Academy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="student.html">Student</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tutor.html">Tutor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Banner -->
+<div class="banner">
+    <h1>Welcome to Global Tutor Academy</h1>
+    <br>
+    <p>Your Path to Excellence</p>
+</div>
+
+<!-- About Us Section -->
+<section class="container my-5">
+    <div class="row">
+        <div class="col text-center">
+            <h2>About Us</h2>
+            <p>Global Tutor Academy provides quality online tuition classes to students from Class 1 to 12. Our expert tutors are dedicated to delivering the best educational experience to help students achieve academic success.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Courses Section -->
+<section class="container my-5">
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="card course-card">
+                <img src="course1.jpg" class="card-img-top" alt="Course 1">
+                <div class="card-body">
+                    <h5 class="card-title">Mathematics</h5>
+                    <p class="card-text">Learn from the best tutors to excel in Mathematics.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card course-card">
+                <img src="course1.jpg" class="card-img-top" alt="Course 2">
+                <div class="card-body">
+                    <h5 class="card-title">Science</h5>
+                    <p class="card-text">Explore the world of Science with our expert guidance.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card course-card">
+                <img src="course1.jpg" class="card-img-top" alt="Course 3">
+                <div class="card-body">
+                    <h5 class="card-title">English</h5>
+                    <p class="card-text">Improve your English language skills with our courses.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col text-center">
+            <a href="courses.html" class="btn btn-primary">View More Courses</a>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial Section -->
+<section class="container my-5">
+    <div class="row">
+        <div class="col text-center">
+            <h2>What Our Students Say</h2>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="testimonial">
+                <p>"Global Tutor Academy helped me excel in my exams. The tutors are very supportive and knowledgeable."</p>
+                <p><strong>- Student A</strong></p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="testimonial">
+                <p>"I love the interactive sessions. It feels like a one-on-one coaching experience."</p>
+                <p><strong>- Student B</strong></p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="testimonial">
+                <p>"The courses are well-structured, and the tutors are always available for doubt-clearing."</p>
+                <p><strong>- Student C</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <p>&copy; 2024 Global Tutor Academy. All rights reserved.</p>
+        <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Privacy Policy</a></li>
+            <li><a href="#" class="text-white">Terms & Conditions</a></li>
+        </ul>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
