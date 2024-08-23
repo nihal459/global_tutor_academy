@@ -134,86 +134,60 @@
           
                 </div>
 
-                <!-- Join Class Request Form -->
-              
-
-                <!-- Notifications Widget -->
         
                 <div class="card mb-4">
-                    <div class="card-header">Tution Requests</div>
+                    <div class="card-header">Profile Settings</div>
                     <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>Course Name</th>
-                                        <th>Tutor</th>
-                                        <th>Course Duration</th>
-                                        <th>Fee</th>
-                                        <th>Application Status</th>
-                                        <th>Payment Link</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Mathematics</td>
-                                        <td>Tutor A</td>
-                                        <td>152 days</td>
-                                        <td>5467</td>
-                                        <td>Approved</td>
-                                        <td><a href="payment.html" class="btn btn-primary">Pay</a></td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>Physics</td>
-                                        <td>Tutor B</td>
-                                        <td>155 days</td>
-                                        <td>6467</td>
-                                        <td>Pending</td>
-                                        <td></td>
-
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-           
-
-                <!-- Enrolled Courses -->
-                <div class="card mb-4">
-                    <div class="card-header">Courses Enrolled</div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>Course Name</th>
-                                        <th>Tutor</th>
-                                        <th>Timetable</th>
-                                        <th>Fee Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>English</td>
-                                        <td>Tutor A</td>
-                                        <td><a href="timetable.html">View Timetable</a></td>
-                                        <td>Paid</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Chemistry</td>
-                                        <td>Tutor B</td>
-                                        <td><a href="timetable.html">View Timetable</a></td>
-                                        <td>Paid</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="username" class="form-label">Username</label>
+                                    <input type="text" class="form-control" id="username" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="emailProfile" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="emailProfile" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="dob" class="form-label">Date of Birth</label>
+                                    <input type="date" class="form-control" id="dob" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="gender" class="form-label">Gender</label>
+                                    <select class="form-select" id="gender" required>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="schoolProfile" class="form-label">School</label>
+                                    <input type="text" class="form-control" id="schoolProfile" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="countryProfile" class="form-label">Country</label>
+                                    <input type="text" class="form-control" id="countryProfile" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phoneProfile" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phoneProfile" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="fathersName" class="form-label">Father's Name</label>
+                                    <input type="text" class="form-control" id="fathersName" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="fathersContact" class="form-label">Father's Contact Number</label>
+                                    <input type="tel" class="form-control" id="fathersContact" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Update Profile</button>
+                        </form>
                     </div>
                 </div>
 
-          
+               
+    
             </div>
         </div>
     </div>
