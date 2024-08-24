@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor Dashboard - Global Tutor Academy</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .dashboard-sidebar {
+            height: 150vh;
+            background-color: #343a40;
+            padding-top: 20px;
+            width: 150px;
+        }
+
+        .sidebar-link {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar-link:hover {
+            background-color: #495057;
+        }
+
+        .content-area {
+            padding: 20px;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .notification-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 12px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+        }
+
+        .table-responsive {
+            margin-top: 20px;
+        }
+
+        .card-header {
+            background-color: #343a40;
+            color: white;
+        }
+
+        .btn-primary,
+        .btn-success {
+            margin-top: 10px;
+        }
+
+        .profile-dropdown .dropdown-menu {
+            right: 0;
+            left: auto;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header with Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Global Tutor Academy</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Notifications Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle position-relative" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-bell"></i>
+                                <span class="notification-badge">3</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">New course request approved</a></li>
+                                <li><a class="dropdown-item" href="#">Payment link for course XYZ</a></li>
+                                <li><a class="dropdown-item" href="#">Class timetable updated</a></li>
+                            </ul>
+                        </li>
+                        <!-- Profile Dropdown -->
+                        <li class="nav-item dropdown profile-dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-person-circle"></i> Profile
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                                <li><a class="dropdown-item" href="tutor_profile.html">Profile</a></li>
+                                <li><a class="dropdown-item" href="index.html">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-2 dashboard-sidebar">
+                <a href="tutor_dashboard.html" class="sidebar-link">Dashboard</a>
+                <a href="manage_batches.html" class="sidebar-link">Manage Batches</a>
+                <a href="manage_requests.html" class="sidebar-link">Manage Requests</a>
+                <a href="assign_batches.html" class="sidebar-link">Assign Batches</a>
+            </div>
+
+            <!-- Content Area -->
+            <div class="col-md-10 content-area">
+                <!-- Search Bar -->
+                <div class="mb-3">
+                    <br>
+                    <br>
+                    <input type="text" class="form-control" id="search" placeholder="Search by Date or Day">
+                    <div class="text-center">
+                        <button class="btn btn-success mt-2" data-bs-toggle="modal" data-bs-target="#updateModal">Update</button>
+                        <br>
+                        <br>
+                        <a href="" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+
+                <!-- Today's Classes Section -->
+                <div class="card mb-4">
+                    <div class="card-header">Timetable</div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th><input type="checkbox" id="selectAll"></th>
+                                        <th>Sl.no</th>
+                                        <th>Course Name</th>
+                                        <th>Tutor</th>
+                                        <th>Batch Name</th>
+                                        <th>Batch Id</th>
+                                        <th>Date</th>
+                                        <th>Day</th>
+                                        <th>Meeting Link</th>
+                                        <th>Meeting Id</th>
+                                        <th>Meeting Password</th>
+                                        <th>Recorded Class Link</th>
+                                        <th>Update</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" class="entryCheckbox"></td>
+                                        <td>1</td>
+                                        <td>Mathematics</td>
+                                        <td>Tutor A</td>
+                                        <td>Batch 1</td>
+                                        <td>B001</td>
+                                        <td>2024-08-23</td>
+                                        <td>Day 1</td>
+                                        <td><a href="https://meetinglink1.com">Join Meeting</a></td>
+                                        <td>123456</td>
+                                        <td>pass123</td>
+                                        <td><a href="https://recordedlink1.com">Watch Recording</a></td>
+                                        <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal">Update</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="entryCheckbox"></td>
+                                        <td>2</td>
+                                        <td>Mathematics</td>
+                                        <td>Tutor A</td>
+                                        <td>Batch 1</td>
+                                        <td>B001</td>
+                                        <td>2024-08-24</td>
+                                        <td>Day 2</td>
+                                        <td><a href="https://meetinglink1.com">Join Meeting</a></td>
+                                        <td>123456</td>
+                                        <td>pass123</td>
+                                        <td><a href="https://recordedlink2.com">Watch Recording</a></td>
+                                        <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal">Update</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="entryCheckbox"></td>
+                                        <td>3</td>
+                                        <td>Mathematics</td>
+                                        <td>Tutor A</td>
+                                        <td>Batch 1</td>
+                                        <td>B001</td>
+                                        <td>2024-08-25</td>
+                                        <td>Day 3</td>
+                                        <td><a href="https://meetinglink1.com">Join Meeting</a></td>
+                                        <td>123456</td>
+                                        <td>pass123</td>
+                                        <td><a href="https://recordedlink3.com">Watch Recording</a></td>
+                                        <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal">Update</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="entryCheckbox"></td>
+                                        <td>4</td>
+                                        <td>Mathematics</td>
+                                        <td>Tutor A</td>
+                                        <td>Batch 1</td>
+                                        <td>B001</td>
+                                        <td>2024-08-26</td>
+                                        <td>Day 4</td>
+                                        <td><a href="https://meetinglink1.com">Join Meeting</a></td>
+                                        <td>123456</td>
+                                        <td>pass123</td>
+                                        <td><a href="https://recordedlink4.com">Watch Recording</a></td>
+                                        <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal">Update</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="entryCheckbox"></td>
+                                        <td>5</td>
+                                        <td>Mathematics</td>
+                                        <td>Tutor A</td>
+                                        <td>Batch 1</td>
+                                        <td>B001</td>
+                                        <td>2024-08-27</td>
+                                        <td>Day 5</td>
+                                        <td><a href="https://meetinglink1.com">Join Meeting</a></td>
+                                        <td>123456</td>
+                                        <td>pass123</td>
+                                        <td><a href="https://recordedlink5.com">Watch Recording</a></td>
+                                        <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal">Update</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="entryCheckbox"></td>
+                                        <td>6</td>
+                                        <td>Mathematics</td>
+                                        <td>Tutor A</td>
+                                        <td>Batch 1</td>
+                                        <td>B001</td>
+                                        <td>2024-08-28</td>
+                                        <td>Day 6</td>
+                                        <td><a href="https://meetinglink1.com">Join Meeting</a></td>
+                                        <td>123456</td>
+                                        <td>pass123</td>
+                                        <td><a href="https://recordedlink6.com">Watch Recording</a></td>
+                                        <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal">Update</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="entryCheckbox"></td>
+                                        <td>7</td>
+                                        <td>Mathematics</td>
+                                        <td>Tutor A</td>
+                                        <td>Batch 1</td>
+                                        <td>B001</td>
+                                        <td>2024-08-29</td>
+                                        <td>Day 7</td>
+                                        <td><a href="https://meetinglink1.com">Join Meeting</a></td>
+                                        <td>123456</td>
+                                        <td>pass123</td>
+                                        <td><a href="https://recordedlink7.com">Watch Recording</a></td>
+                                        <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal">Update</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="entryCheckbox"></td>
+                                        <td>8</td>
+                                        <td>Mathematics</td>
+                                        <td>Tutor A</td>
+                                        <td>Batch 1</td>
+                                        <td>B001</td>
+                                        <td>2024-08-30</td>
+                                        <td>Day 8</td>
+                                        <td><a href="https://meetinglink1.com">Join Meeting</a></td>
+                                        <td>123456</td>
+                                        <td>pass123</td>
+                                        <td><a href="https://recordedlink8.com">Watch Recording</a></td>
+                                        <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal">Update</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="entryCheckbox"></td>
+                                        <td>9</td>
+                                        <td>Mathematics</td>
+                                        <td>Tutor A</td>
+                                        <td>Batch 1</td>
+                                        <td>B001</td>
+                                        <td>2024-08-31</td>
+                                        <td>Day 9</td>
+                                        <td><a href="https://meetinglink1.com">Join Meeting</a></td>
+                                        <td>123456</td>
+                                        <td>pass123</td>
+                                        <td><a href="https://recordedlink9.com">Watch Recording</a></td>
+                                        <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal">Update</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="entryCheckbox"></td>
+                                        <td>10</td>
+                                        <td>Mathematics</td>
+                                        <td>Tutor A</td>
+                                        <td>Batch 1</td>
+                                        <td>B001</td>
+                                        <td>2024-09-01</td>
+                                        <td>Day 10</td>
+                                        <td><a href="https://meetinglink1.com">Join Meeting</a></td>
+                                        <td>123456</td>
+                                        <td>pass123</td>
+                                        <td><a href="https://recordedlink10.com">Watch Recording</a></td>
+                                        <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal">Update</button></td>
+                                    </tr>
+                                    
+                                    <!-- Repeat similar rows for other entries -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Update Modal -->
+                <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="updateModalLabel">Update Class Details</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="updateForm">
+                                    <div class="mb-3">
+                                        <label for="meetingLink" class="form-label">Meeting Link</label>
+                                        <input type="url" class="form-control" id="meetingLink" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="meetingId" class="form-label">Meeting ID</label>
+                                        <input type="text" class="form-control" id="meetingId" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="meetingPassword" class="form-label">Meeting Password</label>
+                                        <input type="text" class="form-control" id="meetingPassword" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="recordingLink" class="form-label">Recording Link</label>
+                                        <input type="url" class="form-control" id="recordingLink">
+                                    </div>
+                                    <button type="submit" class="btn btn-success">Save Changes</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('selectAll').addEventListener('click', function () {
+            var checkboxes = document.querySelectorAll('.entryCheckbox');
+            for (var checkbox of checkboxes) {
+                checkbox.checked = this.checked;
+            }
+        });
+    </script>
+</body>
+
+</html>

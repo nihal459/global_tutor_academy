@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Global Tutor Academy</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            background-color: #343a40;
+            padding: 20px;
+            position: fixed;
+        }
+
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px 15px;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #495057;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .card-header {
+            background-color: #343a40;
+            color: white;
+            font-weight: bold;
+        }
+
+        .navbar {
+            background-color: #343a40;
+            padding: 10px;
+        }
+
+        .navbar .navbar-brand {
+            color: white;
+            font-weight: bold;
+        }
+
+        .navbar .btn-logout {
+            color: white;
+        }
+
+        .btn-logout:hover {
+            color: #f8f9fa;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Global Tutor Academy</a>
+            <a href="index.html" class="btn btn-outline-light ms-auto btn-logout">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="admin_dashboard.html">Dashboard</a>
+        <a href="manage_tutors.html">Manage Tutors</a>
+        <a href="manage_students.html">Manage Students</a>
+        <a href="manage_courses.html">Manage Courses</a>
+        <a href="admin_manage_requests.html">Manage Joining Requests</a>
+        <a href="admin_manage_batches.html">Manage Batches</a>
+    </div>
+
+    <!-- Content Area -->
+    <div class="content">
+        <div class="container-fluid">
+            <!-- Cards Section -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">Total No of Courses</div>
+                        <div class="card-body">
+                            <h3 class="card-title">5</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">Total No of Tutors</div>
+                        <div class="card-body">
+                            <h3 class="card-title">10</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">Total No of Enrolled Students</div>
+                        <div class="card-body">
+                            <h3 class="card-title">205</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card mb-4">
+                <div class="card-header">Today's Classes</div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Batch ID</th>
+                                    <th>Batch Name</th>
+                                    <th>Course Name</th>
+                                    <th>Tutor</th>
+                                    <th>Meeting Link</th>
+                                    <th>Meeting ID</th>
+                                    <th>Meeting Password</th>
+                                    <th>Time</th>
+                                    <th>Day</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Sample data, replace with dynamic content -->
+                                <tr>
+                                    <td>001</td>
+                                    <td>Batch A</td>
+                                    <td>Mathematics</td>
+                                    <td>Tutor A</td>
+                                    <td><a href="#">Join Meeting</a></td>
+                                    <td>123456</td>
+                                    <td>pass123</td>
+                                    <td>10:00 AM - 12:00 PM</td>
+                                    <td>Day 5</td>
+                                    <td>24/08/2024</td>
+                                </tr>
+                                <tr>
+                                    <td>002</td>
+                                    <td>Batch B</td>
+                                    <td>Science</td>
+                                    <td>Tutor B</td>
+                                    <td><a href="#">Join Meeting</a></td>
+                                    <td>654321</td>
+                                    <td>pass456</td>
+                                    <td>01:00 PM - 03:00 PM</td>
+                                    <td>Day 8</td>
+                                    <td>24/08/2024</td>
+                                </tr>
+                                <!-- Add more rows as needed -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Management Sections -->
+        
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Global Tutor Academy. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -131,88 +131,52 @@
 
             <!-- Content Area -->
             <div class="col-md-10 content-area">
-                <!-- Card Row -->
-                <div class="row mb-4">
-                    <!-- Total Students Card -->
-                    <div class="col-md-4">
-                        <div class="card text-center">
-                            <div class="card-body">
-                                <h5 class="card-title">Total No. of Students Enrolled</h5>
-                                <p class="card-text fs-3">150</p>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Update Profile Section -->
+               
 
-                    <!-- Total Batches Card -->
-                    <div class="col-md-4">
-                        <div class="card text-center">
-                            <div class="card-body">
-                                <h5 class="card-title">Total No. of Batches</h5>
-                                <p class="card-text fs-3">5</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Classes Remaining Card -->
-                    <div class="col-md-4">
-                        <div class="card text-center">
-                            <div class="card-body">
-                                <h5 class="card-title">No. of Classes Remaining</h5>
-                                <p class="card-text fs-3">167</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Today's Classes Section -->
+                <!-- Manage Class Joining Requests Section -->
                 <div class="card mb-4">
-                    <div class="card-header">Today's Classes</div>
+                    <div class="card-header">Manage Class Joining Requests</div>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
-                                        <th>Batch ID</th>
-                                        <th>Batch Name</th>
-                                        <th>Course Name</th>
-                                        <th>Meeting Link</th>
-                                        <th>Meeting ID</th>
-                                        <th>Meeting Password</th>
-                                        <th>Time</th>
-                                        <th>Day</th>
-                                        <th>Date</th>
+                                        <th>Student Name</th>
+                                        <th>Course</th>
+                                        <th>Requested Date</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!-- Sample data, replace with dynamic content -->
                                     <tr>
-                                        <td>001</td>
-                                        <td>Batch A</td>
+                                        <td>John Doe</td>
                                         <td>Mathematics</td>
-                                        <td><a href="#">Join Meeting</a></td>
-                                        <td>123456</td>
-                                        <td>pass123</td>
-                                        <td>10:00 AM - 12:00 PM</td>
-                                        <td>Day 1</td>
-                                        <td>24/08/2024</td>
+                                        <td>02-01-2024</td>
+                                        <td>Pending</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-primary">Accept</button>
+                                            <button class="btn btn-sm btn-danger">Decline</button>
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td>002</td>
-                                        <td>Batch B</td>
-                                        <td>Science</td>
-                                        <td><a href="#">Join Meeting</a></td>
-                                        <td>654321</td>
-                                        <td>pass456</td>
-                                        <td>01:00 PM - 03:00 PM</td>
-                                        <td>Day 2</td>
-                                        <td>24/08/2024</td>
+                                        <td>Jane Smith</td>
+                                        <td>Physics</td>
+                                        <td>05-01-2024</td>
+                                        <td>Accepted</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-danger">Decline</button>
+                                        </td>
                                     </tr>
-                                    <!-- Add more rows as needed -->
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
+
+            
             </div>
         </div>
     </div>
